@@ -27,9 +27,280 @@ Step13:Click start button and check the output
 ## THEORY:
 
 ## PROGRAM:
-
+int seg_a = 13; </br>
+int seg_b = 12; </br>
+int seg_c = 11;</br>
+int seg_d = 10;</br>
+int seg_e = 9;</br>
+int seg_f = 8;</br>
+int seg_g = 7;</br>
+int seg_dp = 6;</br>
+int s1=5;</br>
+void setup()</br>
+{</br>
+  pinMode(seg_a,OUTPUT); </br>
+  pinMode(seg_b,OUTPUT);</br>
+  pinMode(seg_c,OUTPUT);</br>
+  pinMode(seg_d,OUTPUT);</br>
+  pinMode(seg_e,OUTPUT);</br>
+  pinMode(seg_f,OUTPUT);</br>
+  pinMode(seg_g,OUTPUT);</br>
+  pinMode(seg_dp,OUTPUT);</br>
+  pinMode(s1,OUTPUT);</br>
+  Serial.begin(9600); </br>
+}
+void loop() </br>
+{ </br>
+  int adc_val;</br>
+  adc_val = analogRead(A1); </br>
+  if (adc_val>850) </br>
+  {</br>
+  Serial.println(adc_val);</br>
+  digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,HIGH);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+   Serial.println("0");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>350  && adc_val<850)
+  {</br>
+    Serial.println(adc_val);</br>
+  digitalWrite(seg_a,HIGH);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,HIGH);</br>
+  digitalWrite(seg_e,HIGH);</br>
+  digitalWrite(seg_f,HIGH);</br>
+  digitalWrite(seg_g,HIGH);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+   Serial.println("1");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>300  && adc_val<350)</br>
+  {</br>
+    Serial.println(adc_val);</br>
+  digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,HIGH);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,HIGH);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+   Serial.println("2");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>230  && adc_val<270)</br>
+  {</br>
+  Serial.println(adc_val);</br>
+  digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,HIGH);</br>
+  digitalWrite(seg_f,HIGH);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+   Serial.println("3");</br>
+   delay(100);</br>
+   }</br>
+  else if ( adc_val>159  && adc_val<229)</br>
+  {</br>
+  Serial.println(adc_val);</br>
+  digitalWrite(seg_a,HIGH);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,HIGH);</br>
+  digitalWrite(seg_e,HIGH);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+   Serial.println("4");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>145  && adc_val<155)</br>
+  {</br>
+    Serial.println(adc_val);</br>
+    digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,HIGH);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,HIGH);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+   Serial.println("5");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>125  && adc_val<135)</br>
+  {</br>
+    Serial.println(adc_val);</br>
+     digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,HIGH);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+    Serial.println("6");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>105  && adc_val<120)</br>
+  {</br>
+    Serial.println(adc_val);</br>
+    digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,HIGH);</br>
+  digitalWrite(seg_e,HIGH);</br>
+  digitalWrite(seg_f,HIGH);</br>
+  digitalWrite(seg_g,HIGH);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+     Serial.println("7");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>92  && adc_val<99)</br>
+  {</br>
+     Serial.println(adc_val);</br>
+    digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+     Serial.println("8");</br>
+    delay(100);</br>
+  }</br>
+   else if ( adc_val>86  && adc_val<91)</br>
+  {</br>
+     Serial.println(adc_val);</br>
+    digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,HIGH);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+     Serial.println("9");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>80  && adc_val<85)</br>
+  {</br>
+     Serial.println(adc_val);</br>
+    digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,HIGH);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+     Serial.println("A");</br>
+    delay(100);</br>
+  }</br>
+   else if ( adc_val>72  && adc_val<79)</br>
+  {</br>
+    Serial.println(adc_val);</br>
+   digitalWrite(seg_a,HIGH);</br>
+  digitalWrite(seg_b,HIGH);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+     Serial.println("B");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>66  && adc_val<71)</br>
+  {</br>
+    Serial.println(adc_val);</br>
+    digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,HIGH);</br>
+  digitalWrite(seg_c,HIGH);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,HIGH);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+     Serial.println("C");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>60  && adc_val<65)</br>
+  {</br>
+     Serial.println(adc_val);</br>
+    digitalWrite(seg_a,HIGH);</br>
+  digitalWrite(seg_b,LOW);</br>
+  digitalWrite(seg_c,LOW);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,HIGH);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+     Serial.println("D");</br>
+    delay(100);</br>
+  }</br>
+  else if ( adc_val>59  && adc_val<63)</br>
+  {</br>
+     Serial.println(adc_val);</br>
+  digitalWrite(seg_a,LOW);</br>
+  digitalWrite(seg_b,HIGH);</br>
+  digitalWrite(seg_c,HIGH);</br>
+  digitalWrite(seg_d,LOW);</br>
+  digitalWrite(seg_e,LOW);</br>
+  digitalWrite(seg_f,LOW);</br>
+  digitalWrite(seg_g,LOW);</br>
+  digitalWrite(seg_dp,HIGH);</br>
+  digitalWrite(s1,HIGH);</br>
+    Serial.println("E");</br>
+    delay(100);</br>
+  }</br>
+  else if( adc_val>52  && adc_val<58)</br>
+  {</br>
+     Serial.println(adc_val);</br>
+     digitalWrite(seg_a,LOW);</br>
+     digitalWrite(seg_b,HIGH);</br>
+    digitalWrite(seg_c,HIGH);</br>
+    digitalWrite(seg_d,HIGH);</br>
+    digitalWrite(seg_e,LOW);</br>
+    digitalWrite(seg_f,LOW);</br>
+    digitalWrite(seg_g,LOW);</br>
+    digitalWrite(seg_dp,HIGH);</br>
+    digitalWrite(s1,HIGH);</br>
+    Serial.println("F");</br>
+    delay(100);</br>
+  }</br>
+  else</br>
+  {</br>   
+  }</br>
+  delay(100);</br>
+}
 ## CIRCUIT DIAGRAM:
-
+![keyboard](https://github.com/Jeganvjk/Keypad-Interfacing/assets/132189820/d495f36d-6254-4568-9255-7d0e61f05ec4)
+.
 ## OUTPUT:
 
 ## RESULT:
